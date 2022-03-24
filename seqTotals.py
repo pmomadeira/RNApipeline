@@ -26,5 +26,5 @@ for fqHtml in fqHtmls:
 	soup = BeautifulSoup(fname.read(), 'lxml')
 	seqs = soup.find('td', string = "Total Sequences")
 	seqsF = seqs.find_parent('tr')
-	sampleName = re.findall(r"{}.*/".format(base_path),fqHtml) and re.sub(r'/F.*(_[1,2].*)', r'\1 ', fqHtml)
+	sampleName = re.findall(r"{}.*/".format(base_path),fqHtml) and re.sub(r'/.*(_[1,2].*)', r'\1 ', fqHtml)
 	print(sampleName, seqsF.get_text(","), file = f, sep = ',')
