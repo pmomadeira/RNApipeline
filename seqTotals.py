@@ -16,7 +16,7 @@ f = open ("readCounts.csv", 'w')
 fqHtmls = glob.glob("*/*.html")
 
 #We also want to define a string to help match the files to a sample. A simple approach is to use
-#print(os.path.abspath(fqHtml), seqsF.get_text(","), file = f, sep = ','), but the os.path.abspath() funtion
+#print(os.path.abspath(fqHtml), seqsF.get_text(","), file = f, sep = ','), but the os.path.abspath() function
 #gives us the complete path to the file. That is to large and makes it harder to read the table
 
 for fqHtml in fqHtmls:
